@@ -105,7 +105,7 @@ sudo chown -R odoo:root /var/log/odoo
 
 
 #Copy and paste below content in config file , write correct addons paths
-echo -e '[options]\n; This is the password that allows database operations:\n; admin_passwd = admin\n; admin_passwd = admin\ndb_host = False\ndb_port = False\ndb_user = odoo\ndb_password = False\nlogfile = /var/log/odoo/odoo-server.log\naddons_path = /opt/odoo/addons,/opt/odoo/odoo/addons' > /etc/odoo.conf
+echo -e "[options]\n; This is the password that allows database operations:\n; admin_passwd = ${ADMIN_PASSWD}\n; admin_passwd = ${ADMIN_PASSWD}\ndb_host = False\ndb_port = False\ndb_user = odoo\ndb_password = False\nlogfile = /var/log/odoo/odoo-server.log\naddons_path = /usr/local/odoo/custom-addons,/opt/odoo/addons,/opt/odoo/odoo/addons" > /etc/odoo.conf
 sudo chown odoo: /etc/odoo.conf
 
 ## Edit odoo configuration file
